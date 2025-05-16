@@ -567,6 +567,8 @@ nav {
 
 @media (max-width: 760px) {
     nav {
+        font-size: 0;
+
         position: fixed;
         bottom: 0;
         left: 0;
@@ -902,27 +904,33 @@ a.box_description:visited {
 /* popup (begin) */
 .popup-container {
     position: fixed;
-    top: 0;
+    top: -20px;
     left: 0;
 
     display: flex;
     overflow: scroll;
     opacity: 0;
     z-index: -10;
+    /*visibility: hidden;*/
 
     width: 100%;
     height: 100%;
 
     pointer-events: none;
 
-    transition: all 0.4s ease;
+    transition: opacity 0.4s ease, top 0.4s ease, z-index 0s linear 0.4s;
 }
 
 .popup-container.js-active {
+    top: 0;
+
     opacity: 1;
+    /*visibility: visible;*/
     z-index: 10;
 
     pointer-events: auto;
+
+    transition: opacity 0.4s ease, top 0.4s ease, z-index 0s linear 0s;
 }
 
 .popup__overlay {
