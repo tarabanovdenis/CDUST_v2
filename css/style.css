@@ -811,11 +811,11 @@ a.box_description:visited {
 
 @media (max-width: 760px) {
     .grid_labels .grid__cell:first-child {
-        flex: 1 1 54%;
+        flex: 1 1 50%;
     }
 
     .grid_labels .grid__cell:last-child {
-        flex: 1 1 46%;
+        flex: 1 1 50%;
     }
 
 }
@@ -823,6 +823,8 @@ a.box_description:visited {
 
 
 /* label-highlight (begin) */
+.label-container {white-space: nowrap}
+
 .label-highlight {
     font-family: var(--fontBold), sans-serif;
 
